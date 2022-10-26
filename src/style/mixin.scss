@@ -1,0 +1,94 @@
+@mixin clear {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+@mixin content {
+  width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin text-overflow($line: 1) {
+  @if $line == 1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin transparent-bg($--border-color: rgba(255, 255, 255, 0.2), $opacity: 0.2) {
+  border-radius: 20px;
+  border: 1px solid $--border-color;
+  background-color: rgba(0, 0, 0, $opacity);
+}
+
+@mixin scrollbar($width: 4px, $right: 0) {
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: $width;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    margin-right: $right;
+  }
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    /* border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: #535353; */
+    border-right: 4px solid #d8d8d8;
+  }
+}
+
+// 列表容器 自适应缝隙 不需要计算margin
+@mixin flex-warp-space($itemWidth: 100px) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &::after {
+    content: '';
+    width: $itemWidth;
+  }
+}
+
+// 快速建立flex模型
+@mixin flex($mode: 'l-c') {
+  @if $mode == 'l-c' {
+    display: flex;
+    align-items: center;
+  } @else if $mode == 'c-c' {
+    display: flex;
+    justify-content: center;
+  } @else if $mode == 'l-c-c' {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } @else if $mode == 'l-b' {
+    display: flex;
+    justify-content: space-between;
+  } @else if $mode == 'c-b' {
+    display: flex;
+    align-items: space-between;
+  } @else if $mode == 'l-c-b' {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } @else if $mode == 'd-b' {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } @else if $mode == 'c-c-c' {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

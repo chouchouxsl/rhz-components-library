@@ -1,0 +1,62 @@
+{
+  "name": "rhz-component-library",
+  "version": "1.0.76",
+  "description": "Vue3 Basic Component Library",
+  "type": "module",
+  "keywords": [
+    "rhz",
+    "component",
+    "vite",
+    "vue3"
+  ],
+  "author": "r_h_zero",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/chouchouxsl/rhz-component-library"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "dev:docs": "pnpm run -C docs dev",
+    "build": "vite build",
+    "build:docs": "vite build docs",
+    "lint": "eslint .",
+    "lint:fix": "eslint --ext .js,.ts,.vue,.json,.md --fix .",
+    "release": "vite build && standard-version -r patch && npm publish"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "@vueuse/core": "^8.3.1",
+    "axios": "^0.21.1",
+    "dayjs": "^1.11.4",
+    "qs": "^6.11.0",
+    "vue-cropper": "^1.0.5",
+    "ant-design-vue": "^3.2.3",
+    "element-plus": "2.0.2"
+  },
+  "devDependencies": {
+    "@r_h_zero/eslint-config": "^0.0.5",
+    "@types/node": "^18.0.4",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "eslint": "^8.20.0",
+    "sass": "^1.53.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.6.4",
+    "unplugin-auto-import": "^0.9.3",
+    "unplugin-vue-components": "^0.21.1",
+    "vite": "^3.0.0",
+    "vite-plugin-dts": "^1.2.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vite-svg-loader": "^3.4.0",
+    "vue": "^3.2.33",
+    "vue-tsc": "^0.38.4"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "style": "dist/style.css"
+}

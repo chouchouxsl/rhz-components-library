@@ -1,0 +1,11 @@
+{
+  "name": "docs",
+  "scripts": {
+    "dev": "vitepress dev press",
+    "build": "vitepress build press",
+    "serve": "vitepress serve press"
+  },
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.4"
+  }
+}
