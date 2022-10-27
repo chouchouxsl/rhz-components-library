@@ -7,12 +7,7 @@ import type { App } from 'vue'
 
 const prefix = 'rhz-'
 
-const components = [
-  RhzCaptcha,
-  RhzEmpty,
-  RhzSvgIcon,
-  RhzGroundGlassbg,
-]
+const components = [RhzCaptcha, RhzEmpty, RhzSvgIcon, RhzGroundGlassbg]
 
 const install = (app: App) => {
   components.map(item => {
@@ -20,13 +15,7 @@ const install = (app: App) => {
   })
 }
 
-export {
-  RhzCaptcha,
-  RhzEmpty,
-  RhzSvgIcon,
-  RhzGroundGlassbg,
-  IcaptchaCb
-}
+export { RhzCaptcha, RhzEmpty, RhzSvgIcon, RhzGroundGlassbg, IcaptchaCb }
 
 export * from '@/utils'
 

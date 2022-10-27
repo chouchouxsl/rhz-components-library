@@ -1,6 +1,3 @@
 {
-  "recommendations": [
-    "vue.volar",
-    "MariusAlchimavicius.json-to-ts"
-  ]
+  "recommendations": ["vue.volar", "MariusAlchimavicius.json-to-ts"]
 }

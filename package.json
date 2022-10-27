@@ -1,6 +1,6 @@
 {
   "name": "rhz-component-library",
-  "version": "1.0.76",
+  "version": "1.0.0",
   "description": "Vue3 Basic Component Library",
   "type": "module",
   "keywords": [
@@ -9,14 +9,14 @@
     "vite",
     "vue3"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chouchouxsl/rhz-components-library.git"
+  },
   "author": "r_h_zero",
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "github",
-    "url": "https://github.com/chouchouxsl/rhz-component-library"
-  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -31,12 +31,12 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.6",
     "@vueuse/core": "^8.3.1",
+    "ant-design-vue": "^3.2.3",
     "axios": "^0.21.1",
     "dayjs": "^1.11.4",
+    "element-plus": "2.0.2",
     "qs": "^6.11.0",
-    "vue-cropper": "^1.0.5",
-    "ant-design-vue": "^3.2.3",
-    "element-plus": "2.0.2"
+    "vue-cropper": "^1.0.5"
   },
   "devDependencies": {
     "@r_h_zero/eslint-config": "^0.0.5",
